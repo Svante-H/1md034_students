@@ -12,9 +12,9 @@
 <table>
     <thead>
         <tr>
-            <th>Burger 1</th>
-            <th>Burger 2</th>
-            <th>Burger 3</th>
+            <th>Big Mac</th>
+            <th>Cheeseburger</th>
+            <th>Vegan mushroom burger</th>
         </tr>
     </thead>
     <tbody>
@@ -22,7 +22,7 @@
     <tr>
         <td>
             <img src="https://images.ctfassets.net/sd2voc54sjgs/5L6livQvCw28S04IUSAcm6/ebdbf21e81866fc034386ca5400ac530/Blog_Header_Hamburger_History_Option.png?fm=jpg&q=80&fl=progressive&w=1100"
-                 alt="Burger1" title ="Burger1" width="220">
+                 alt="Burger1" title ="Big Mac" width="220">
             <ul>
                 <li>Burger with fried onion, <br />lettuce and cheese</li>
                 <li>Contains gluten</li>
@@ -31,7 +31,7 @@
         </td>
 
         <td>
-            <img src="https://www.burgerdudes.se/wp-content/uploads/2018/09/shadyburger_basic_burger_stefan_med.jpg" alt="Burger2" title="Burger2" width="220" height="124">
+            <img src="https://www.burgerdudes.se/wp-content/uploads/2018/09/shadyburger_basic_burger_stefan_med.jpg" alt="Burger2" title="Cheeseburger" width="220" height="124">
             <ul>
                 <li>Classic cheeseburger</li>
                 <li>Gluten-free, lactose free</li>
@@ -42,7 +42,7 @@
         </td>
 
         <td>
-            <img src="https://www.thespruceeats.com/thmb/KAgMssHoQUmx30uuYL_FTahXA0A=/2048x1360/filters:fill(auto,1)/vegan-mushroom-bean-burger-recipe-3378623-13_preview1-5b241897fa6bcc0036d2c9bf.jpeg" alt="Burger3" title="Burge3" width="220" height="124">
+            <img src="https://www.thespruceeats.com/thmb/KAgMssHoQUmx30uuYL_FTahXA0A=/2048x1360/filters:fill(auto,1)/vegan-mushroom-bean-burger-recipe-3378623-13_preview1-5b241897fa6bcc0036d2c9bf.jpeg" alt="Burger3" title="Vegan mushroom burger" width="220" height="124">
             <ul>
                 <li>Mushroom burger with zucchini</li>
                 <li>Vegan</li>
@@ -81,6 +81,47 @@
                             <label for="houseNumber">House</label><br>
                             <input type="number" min="1" id="houseNumber" name="house" required="required" placeholder="House number"/>
                         </p>
+
+                        <p>
+                            <label for="payment">Payment method</label><br />
+                            <select id="payment" name="rcp">
+                                <option selected="selected">Card payment</option>
+                                <option>Swish</option>
+                                <option>Paypal</option>
+                                <option>Installment</option>
+
+                            </select>
+                        </p>
+
+                        <p>
+                            <label>Gender</label>
+                        </p>
+
+                            <input type="radio"
+                                   id="male"
+                                   name="gender"
+                                   value="male"
+                                   checked="checked"
+                                   /><label for="male"> Male</label>
+                                                <br>
+
+                            <input type="radio"
+                                   id="female"
+                                   value="female"
+                                   name="gender"
+                                   Female/><label for="female"> Female</label><br>
+
+                            <input type="radio"
+                                   id="nonbinary"
+                                   name="gender"
+                                   value="nonbinary"
+                                   Non-binary/><label for="nonbinary"> Non-binary</label><br>
+
+                            <input type="radio"
+                                   id="undisclosed"
+                                   name="gender"
+                                   value="undisclosed"
+                                   /><label for="undisclosed"> Rather not say</label><br>
 
 
 
