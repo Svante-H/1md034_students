@@ -29,11 +29,11 @@ Create an index.html file which contains:
 	- [x] Street
 	- [x] House Number (only allowing numbers in this field)
 	- [x] Gender (male, female, do not wish to provide as radio buttons)
-- [ ] A button to place the order
+- [x] A button to place the order
 
 ## 03 CSS
 
-- [ ] Create style.css and link to it from index.html
+- [x] Create style.css and link to it from index.html
 
 Add the following style/behaviour to your website (mostly in style.css but also requiring changes in index.html):
 - [ ] Define a base line font for your site by putting the style rule on "body"
