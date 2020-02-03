@@ -14,3 +14,7 @@ body {
 #contact{
 
 }
+button:hover {
+    color: aqua; /*doesnt actually do anything */
+    cursor: grab;
+}
