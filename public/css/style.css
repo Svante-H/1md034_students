@@ -7,8 +7,14 @@ body {
     font-weight: bold;
 }
 #BurgerTable{
+    margin: 0 auto;
     background: black;
     color: white;
+    width: 80%;
+}
+#BurgerTable td{
+    text-align: center;
+    vertical-align: middle;
 }
 
 #contact{
@@ -17,4 +23,7 @@ body {
 button:hover {
     color: aqua; /*doesnt actually do anything */
     cursor: grab;
+}
+td{
+    alignment: center;
 }
