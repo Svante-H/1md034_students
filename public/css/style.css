@@ -6,12 +6,16 @@ body {
     color: #ff5500;
     font-weight: bold;
     margin-left: initial;
+    padding: initial;
+
 }
-#BurgerTable{
-    margin: 0 auto;
+#burgerPicker{
+    margin: 20px auto;
     background: black;
     color: white;
-    width: 80%;
+    width: 97%;
+    border: white 2px dashed;
+
 }
 #BurgerTable td{
     text-align: center;
@@ -35,16 +39,48 @@ section{
     margin-left: 15px;
     margin-bottom: 10px;
     border: 2px dashed black;
-    padding: 20px;
+    padding: 10px;
 
 }
 #headerImg{
 
     width: 100%;
     opacity: 70%;
+    position: relative;
+    bottom: 20px;
+
+}
+
+#headertext{
+    position: relative;
+    top: 60px;
+    left: 150px;
+    z-index: 2;
 }
 
 #header{
     border: none;
     margin-left: 20px;
-} /*Lite förvirrad med instruktionerna, bestämde att lägga bakgrunden i css.*/
+
+}
+/*Lite förvirrad med instruktionerna, fick inte backgrundsbilden helt "aligned" med resten men fortsätter ändå*/
+
+.wrapper{
+    display:grid;
+    grid-gap: 20px;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+}
+.a{
+    row: 1 /span 4;
+    column:1;
+}
+.b{
+    row: 1/span 4;
+    column: 2;
+}
+
+.c{
+    row: 1 /span 4;
+    column: 3;
+}
