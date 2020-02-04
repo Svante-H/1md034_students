@@ -32,9 +32,19 @@ button:hover {
 }
 
 section{
-    margin-left: 30px;
+    margin-left: 15px;
     margin-bottom: 10px;
     border: 2px dashed black;
     padding: 20px;
 
 }
+#headerImg{
+
+    width: 100%;
+    opacity: 70%;
+}
+
+#header{
+    border: none;
+    margin-left: 20px;
+} /*Lite förvirrad med instruktionerna, bestämde att lägga bakgrunden i css.*/
