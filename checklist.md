@@ -42,9 +42,9 @@ Add the following style/behaviour to your website (mostly in style.css but also 
 - [x] Define text and background color for one of your two sections (burger selection and customer information)
 - [x] Create an empty style definition for the section with unchanged text and background
 - [x] Change the cursor and background when hovering over the order button
-- [ ] Define a table width and center it
-- [ ] Add margins to the sections and the order button
-- [ ] Add a border to the two sections
+- [x] Define a table width and center it
+- [x] Add margins to the sections and the order button
+- [x] Add a border to the two sections
 - [ ] Add an image after your headline and make it slightly transparent
 - [ ] Place the image behind your headline to finalize your header
 - [ ] Use a grid layout instead of tables for the burger selection section
