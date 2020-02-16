@@ -2,7 +2,7 @@
 const vm = new Vue({
         el: "#BurgerTable",
         data: {
-            menu: jsMenu
+            menu: food
         }
     });
 
