@@ -1,4 +1,4 @@
-
+/*
 const vm = new Vue({
     el: '#selectBurger',
     data: {
@@ -8,3 +8,12 @@ const vm = new Vue({
         bNo4: burger4.getName() + ': ' + burger4.getCalories(),
         bNo5: burger5.getName() + ': ' + burger5.getCalories()
     })
+
+const vm = new Vue({
+    el: "#selectBurger",
+    data: {
+        menu: menu
+    }
+
+})
+*/

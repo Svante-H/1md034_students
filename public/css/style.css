@@ -20,6 +20,7 @@ body {
 #BurgerTable td{
     text-align: center;
     vertical-align: middle;
+
 }
 
 #contact{
@@ -71,6 +72,7 @@ section{
     grid-template-columns: auto auto auto;
     justify-items: center;
 }
+
 .a{
     row: 1 /span 4;
     column:1;
