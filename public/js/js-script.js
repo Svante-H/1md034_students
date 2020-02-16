@@ -84,15 +84,15 @@ for (const burger in menu) {
 
  */
 
-let menu = [
+let jsMenu = [
     new menuItem("Big Mac", 775, true, true, "https://images.ctfassets.net/sd2voc54sjgs/5L6livQvCw28S04IUSAcm6/ebdbf21e81866fc034386ca5400ac530/Blog_Header_Hamburger_History_Option.png?fm=jpg&q=80&fl=progressive&w=1100"),
     new menuItem("Cheeseburger", 662, false, true, "https://www.burgerdudes.se/wp-content/uploads/2018/09/shadyburger_basic_burger_stefan_med.jpg"),
     new menuItem("Vegan Mushroom", 512, false, false, "https://www.thespruceeats.com/thmb/KAgMssHoQUmx30uuYL_FTahXA0A=/2048x1360/filters:fill(auto,1)/vegan-mushroom-bean-burger-recipe-3378623-13_preview1-5b241897fa6bcc0036d2c9bf.jpeg"),
-    new menuItem("Chicken burger", 443, true, true, "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.foxvalleyfoodie.com%2Fchicken-burgers%2F&psig=AOvVaw1c3p8gkleXI6DGATjirIlK&ust=1581956944324000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDcn4S_1ucCFQAAAAAdAAAAABAD"),
+   /* new menuItem("Chicken burger", 443, true, true, "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.foxvalleyfoodie.com%2Fchicken-burgers%2F&psig=AOvVaw1c3p8gkleXI6DGATjirIlK&ust=1581956944324000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDcn4S_1ucCFQAAAAAdAAAAABAD"),
     new menuItem("Halloumi burger", 731, false, true, "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.coop.co.uk%2Frecipes%2Fchorizo-and-halloumi-burgers&psig=AOvVaw1kzoXtXWsbm2lYyOUpXqzp&ust=1581956973658000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMift46_1ucCFQAAAAAdAAAAABAD")
-];
+*/];
 
-
+/*
 for(const burger of menu) {
     let elem = document.createElement("div");
     let elemInfo = document.createTextNode(burger.burgerInfo());
@@ -119,3 +119,5 @@ for(const burger of menu) {
         document.getElementById("c").appendChild(elem);
     }
 }
+
+*/

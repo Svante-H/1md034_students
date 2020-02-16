@@ -20,16 +20,16 @@
 
 <div class="wrapper" id="BurgerTable">
 
-    <div class="box a" id ="a">
-
+    <div class="box a" id ="a" v-for="burger in menu">
+       {{ burger.name }}
     </div>
 
-    <div class="box b" id="b">
-
+    <div class="box b" id="b" v-for="burger in menu">
+        <img v-bind:src="burger.imgSrc" id="burgerImg">
     </div>
 
-    <div class="box c" id="c">
-
+    <div class="box c" id="c" v-for="burger in menu">
+        {{burger.burgerInfo()}}
     </div>
 </div>
 
