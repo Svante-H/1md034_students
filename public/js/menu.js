@@ -20,4 +20,4 @@ let food = [
         "lactose": false,
         "imgSrc": "https://www.thespruceeats.com/thmb/KAgMssHoQUmx30uuYL_FTahXA0A=/2048x1360/filters:fill(auto,1)/vegan-mushroom-bean-burger-recipe-3378623-13_preview1-5b241897fa6bcc0036d2c9bf.jpeg"
     }
-    ]
+];

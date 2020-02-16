@@ -5,10 +5,12 @@
     <title>Online Burger Ordering!</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+
     <script src="js/js-script.js" defer></script>
+    <script type="text/javascript" src="js/menu.js" defer></script>
     <script src="js/vue-script.js" defer></script>
     <script src="https://vuejs.org/js/vue.js"></script>
-    <script type="text/javascript" src="js/menu.js"></script>
+</head>
 <body>
 
 <section id="header">
@@ -21,15 +23,15 @@
 
 <div class="wrapper" id="BurgerTable">
 
-    <div class="box a" id ="a" v-for="burger in menu">
+    <div class="box a" id ="a" v-for="burger in food">
        {{ burger.name }}
     </div>
 
-    <div class="box b" id="b" v-for="burger in menu">
+    <div class="box b" id="b" v-for="burger in food">
         <img v-bind:src="burger.imgSrc" id="burgerImg">
     </div>
 
-    <div class="box c" id="c" v-for="burger in menu">
+    <div class="box c" id="c" v-for="burger in food">
         <ul>
             <li>
                 <p> Contains {{burger.kCal}} Calories</p>
@@ -111,7 +113,7 @@
                    name="gender"
                    value="undisclosed"/>
             <label for="undisclosed"> Rather not say</label><br>
-                        <button id="purchase" type="submit"> <img width="120" src="https://www.paintspot.ca/wp-content/uploads/2016/08/Order-Now-Orange-Button-1200-x-345.png"/> </button>
+                        <button id="purchase" type="submit"> <img width="120" src="https://www.paintspot.ca/wp-content/uploads/2016/08/Order-Now-Orange-Button-1200-x-345.png" v-on:click="getInput()"/> </button>
         </form>
 </section>
 <footer>
