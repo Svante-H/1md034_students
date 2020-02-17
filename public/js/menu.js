@@ -8,13 +8,13 @@ let food = [
     },
     {
         "name": "Cheeseburger",
-        "kCal":662,
-        "gluten":false,
-        "lactose":true,
+        "kCal": 662,
+        "gluten": false,
+        "lactose": true,
         "imgSrc": "https://www.burgerdudes.se/wp-content/uploads/2018/09/shadyburger_basic_burger_stefan_med.jpg"
     },
     {
-        "name": "Vegan Mushroom",
+        "name": "Vegan Mushroom Burger",
         "kCal": 556,
         "gluten": false,
         "lactose": false,

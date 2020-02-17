@@ -1,39 +1,59 @@
+function orderToString(toConvert) {
+    let returnStr = "";
+    returnStr += "Name: " + toConvert.name;
+    returnStr += "\nEmail: " + toConvert.email;
+    returnStr += "\nStreet:" + toConvert.streetName + " " + toConvert.houseNr;
+    returnStr += "\nPayment method: " + toConvert.payment;
+    returnStr += "\nGender: " + toConvert.gender;
+    return returnStr;
+
+
+}
 
 const vm = new Vue({
     el: "#BurgerTable",
-    data:{
+    data: {
         food: food
     }
 
 });
-
+let inputData = {};
 
 const vm1 = new Vue({
     el: "#purchase",
     data: {
-        inputArray: input,
+        inputData: {
+            name: "",
+            email: "",
+            streetName: "",
+            houseNr: 0,
+            payment: "card payment",
+            gender: "male",
+        }
     },
     methods: {
-        getInput : function() {
-                let input = [];
-                let fullname = document.getElementById("fullname").value;
-                let mail = document.getElementById("mail").value;
-                let streetName = document.getElementById("streetName").value;
-                let houseNumer =document.getElementById("houseNumber").value;
-                let payment = document.getElementById("payment").value;
-                let radios = document.getElementsByName("gender")
-                let gender;
-                for(let i = 0; i < radios.length; i++){
-                    if(radios[i].checked){
-                        gender = radios[i].value;
-                    }
+        getInput: function () {
+            inputData.name = document.getElementById("fullname").value;
+            inputData.email = document.getElementById("mail").value;
+            inputData.streetName = document.getElementById("streetName").value;
+            inputData.houseNr = document.getElementById("houseNumber").value;
+            inputData.payment = document.getElementById("payment").value;
+            let radios = document.getElementsByName("radios");
+            let gender;
+            for (let i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    gender = radios[i].value;
                 }
-
-                input.push(fullname, mail, streetName, houseNumer, payment, gender);
-                console.log(input);
             }
+            inputData.gender = gender;
+        },
+        printInfo: function () {
+
+
+            let stringOfInfo = orderToString(vm1.inputData);
+
         }
+    }
 
 
 });
-

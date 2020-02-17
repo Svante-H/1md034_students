@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Online Burger Ordering!</title>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
 
     <script src="js/js-script.js" defer></script>
     <script type="text/javascript" src="js/menu.js" defer></script>
@@ -14,110 +13,118 @@
 <body>
 
 <section id="header">
-<h1 id="headertext" > Welcome to BurgerOnline</h1>
-    <img id="headerImg" alt="" src="https://www.jakpost.travel/wimages/large/103-1035693_download-header-burger-youtube-banner.png"/>
+    <h1 id="headertext"> Welcome to BurgerOnline</h1>
+    <img id="headerImg" alt=""
+         src="https://www.jakpost.travel/wimages/large/103-1035693_download-header-burger-youtube-banner.png"/>
 </section>
 <section id="burgerPicker">
-<h3>Choose a burger!</h3>
-<p>Pick a burger you would like to order.</p>
+    <h3>Choose a burger!</h3>
+    <p>Pick a burger you would like to order.</p>
 
-<div class="wrapper" id="BurgerTable">
+    <div class="wrapper" id="BurgerTable">
 
-    <div class="box a" id ="a" v-for="burger in food">
-       {{ burger.name }}
+        <div class="box a" id="a" v-for="burger in food">
+            {{ burger.name }}
+        </div>
+
+        <div class="box b" id="b" v-for="burger in food">
+            <img v-bind:src="burger.imgSrc" id="burgerImg">
+        </div>
+
+        <div class="box c" id="c" v-for="burger in food">
+            <ul>
+                <li>
+                    <p> Contains {{burger.kCal}} Calories</p>
+                </li>
+                <li>
+                    <p v-if="burger.gluten">
+                        Contains gluten
+                    </p>
+                    <p v-else>
+                        Gluten free
+                    </p>
+                </li>
+                <li>
+                    <p v-if="burger.lactose">
+                        Contains lactose
+                    </p>
+                    <p v-else>
+                        Lactose free
+                    </p>
+                </li>
+                <div>
+                    <input type="checkbox" id="burgerCheck">
+                    <label for="burgerCheck">I want a {{burger.name}}!</label>
+
+                </div>
+            </ul>
+        </div>
     </div>
-
-    <div class="box b" id="b" v-for="burger in food">
-        <img v-bind:src="burger.imgSrc" id="burgerImg">
-    </div>
-
-    <div class="box c" id="c" v-for="burger in food">
-        <ul>
-            <li>
-                <p> Contains {{burger.kCal}} Calories</p>
-            </li>
-            <li>
-                <p v-if="burger.gluten">
-                    Contains gluten
-                </p>
-                <p v-else>
-                    Gluten free
-                </p>
-            </li>
-            <li>
-                <p v-if="burger.lactose">
-                    Contains lactose
-                </p>
-                <p v-else>
-                    Lactose free
-                </p>
-            </li>
-
-        </ul>
-    </div>
-</div>
 
 
 </section>
-<section id ="contact">
-<h3>Delivery information:</h3>
-<p>Please enter your credentials so we can deliver your burger</p>
-        <form>
-            <p>
-                <label for="fullname">Full name</label><br>
-                <input type="text" id="fullname" name="fn" required="required" placeholder="First and last name"/>
-            </p>
-            <p>
-                <label for="mail">E-mail</label><br>
-                <input type="email" id="mail" name="email" required="required" placeholder="E-mail adress"/>
-            </p>
-            <p>
-                <label for="streetName">Street</label><br>
-                <input type="text" id="streetName" name="street" required="required" placeholder="Street name"/> <!-- type maybe number? -->
-            </p>
-            <p>
-                <label for="houseNumber">House</label><br>
-                <input type="number" min="1" id="houseNumber" name="house" required="required" placeholder="House number"/>
-            </p>
-            <p>
-                <label for="payment">Payment method</label><br />
-                <select id="payment" name="rcp">
-                    <option selected="selected">Card payment</option>
-                    <option>Swish</option>
-                    <option>Paypal</option>
-                    <option>Installment</option>
-                </select>
-            </p>
-            <p>
-                <label>Gender</label>
-            </p>
-            <input type="radio"
-                   id="male"
-                   name="gender"
-                   value="male"
-                   checked="checked"/>
-                <label for="male"> Male</label><br>
-            <input type="radio"
-                   id="female"
-                   value="female"
-                   name="gender"
-                   Female/>
-            <label for="female"> Female</label><br>
-                <input type="radio"
-                       id="nonbinary"
-                       name="gender"
-                       value="nonbinary"
-                       Non-binary/><label for="nonbinary"> Non-binary</label><br>
-            <input type="radio"
-                   id="undisclosed"
-                   name="gender"
-                   value="undisclosed"/>
-            <label for="undisclosed"> Rather not say</label><br>
-                        <button id="purchase" type="submit"> <img width="120" src="https://www.paintspot.ca/wp-content/uploads/2016/08/Order-Now-Orange-Button-1200-x-345.png" v-on:click="getInput()"/> </button>
-        </form>
+<section id="contact">
+    <h3>Delivery information:</h3>
+    <p>Please enter your credentials so we can deliver your burger</p>
+    <form>
+        <p>
+            <label for="fullname">Full name</label><br>
+            <input type="text" id="fullname" name="fn" required="required" placeholder="First and last name"/>
+        </p>
+        <p>
+            <label for="mail">E-mail</label><br>
+            <input type="email" id="mail" name="email" required="required" placeholder="E-mail adress"/>
+        </p>
+        <p>
+            <label for="streetName">Street</label><br>
+            <input type="text" id="streetName" name="street" required="required" placeholder="Street name"/>
+            <!-- type maybe number? -->
+        </p>
+        <p>
+            <label for="houseNumber">House</label><br>
+            <input type="number" min="1" id="houseNumber" name="house" required="required" placeholder="House number"/>
+        </p>
+        <p>
+            <label for="payment">Payment method</label><br/>
+            <select id="payment" name="rcp">
+                <option selected="selected">Card payment</option>
+                <option>Swish</option>
+                <option>Paypal</option>
+                <option>Installment</option>
+            </select>
+        </p>
+        <p>
+            <label>Gender</label>
+        </p>
+        <input type="radio"
+               id="male"
+               name="gender"
+               value="male"
+               checked="checked"/>
+        <label for="male"> Male</label><br>
+        <input type="radio"
+               id="female"
+               value="female"
+               name="gender"
+               Female/>
+        <label for="female"> Female</label><br>
+        <input type="radio"
+               id="nonbinary"
+               name="gender"
+               value="nonbinary"
+               Non-binary/><label for="nonbinary"> Non-binary</label><br>
+        <input type="radio"
+               id="undisclosed"
+               name="gender"
+               value="undisclosed"/>
+        <label for="undisclosed"> Rather not say</label><br>
+        <button id="purchase" type="submit"><img width="120"
+                                                 src="https://www.paintspot.ca/wp-content/uploads/2016/08/Order-Now-Orange-Button-1200-x-345.png"
+                                                 v-on:click="getInput()"/></button>
+    </form>
 </section>
 <footer>
-<hr>
+    <hr>
     <p>E-mail:BurgerOnline@gmail.com</p>
 </footer>
 </body>

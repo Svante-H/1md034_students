@@ -2,6 +2,7 @@ body {
     font-family: Arial;
     font-size: 110%;
 }
+
 .Gluten {
     color: #ff5500;
     font-weight: bold;
@@ -9,7 +10,8 @@ body {
     padding: initial;
 
 }
-#burgerPicker{
+
+#burgerPicker {
     margin: 20px auto;
     background: black;
     color: white;
@@ -17,16 +19,18 @@ body {
     border: white 2px dashed;
 
 }
-#BurgerTable td{
+
+#BurgerTable td {
     text-align: center;
     vertical-align: middle;
 
 }
 
-#contact{
+#contact {
 
-    }
-#purchase{
+}
+
+#purchase {
     margin: 10px;
 }
 
@@ -36,14 +40,15 @@ button:hover {
     cursor: grab;
 }
 
-section{
+section {
     margin-left: 15px;
     margin-bottom: 10px;
     border: 2px dashed black;
     padding: 10px;
 
 }
-#headerImg{
+
+#headerImg {
 
     width: 100%;
     opacity: 70%;
@@ -52,41 +57,44 @@ section{
 
 }
 
-#headertext{
+#headertext {
     position: relative;
     top: 60px;
     left: 150px;
     z-index: 2;
 }
 
-#header{
+#header {
     border: none;
     margin-left: 20px;
 
 }
+
 /*Lite förvirrad med instruktionerna, fick inte backgrundsbilden helt "aligned" med resten men fortsätter ändå*/
 
-.wrapper{
-    display:grid;
+.wrapper {
+    display: grid;
     grid-gap: 20px;
     grid-template-columns: auto auto auto;
     justify-items: center;
 }
 
-.a{
+.a {
     column: 1 /span 4;
-    row:1;
+    row: 1;
 }
-.b{
+
+.b {
     column: 1/span 4;
     row: 2;
 }
 
-.c{
+.c {
     column: 1 /span 4;
     row: 3;
 }
-#burgerImg{
+
+#burgerImg {
     height: 200px;
     width: 300px;
 }

@@ -28,17 +28,3 @@ for(const burger of menu) {
 
 */
 
-let input = [];
-/*
-function getInput(){
-    let fullname = document.getElementById("fullname").value;
-    let houseNumer =document.getElementById("houseNumber").value;
-    let gender = document.getElementsByName("gender").value;
-    let payment = document.getElementById("payment").value;
-    let mail = document.getElementById("mail").value;
-    let streetName = document.getElementById("streetName").value;
-    inputArray.push(fullname, houseNumer, gender, payment, mail, streetName);
-    console.log(inputArray);
-}
-
- */
