@@ -4,7 +4,7 @@
     <title>Online Burger Ordering!</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
-
+    <script src="/socket.io/socket.io.js"></script>
     <script src="js/js-script.js" defer></script>
     <script type="text/javascript" src="js/menu.js" defer></script>
     <script src="js/vue-script.js" defer></script>
@@ -76,15 +76,6 @@
                 <input type="email" id="mail" name="email" required="required" placeholder="E-mail adress"/>
             </p>
             <p>
-                <label for="streetName">Street</label><br>
-                <input type="text" id="streetName" name="street" required="required" placeholder="Street name"/>
-            </p>
-            <p>
-                <label for="houseNumber">House</label><br>
-                <input type="number" min="1" id="houseNumber" name="house" required="required"
-                       placeholder="House number"/>
-            </p>
-            <p>
                 <label for="payment">Payment method</label><br/>
                 <select id="payment" name="rcp">
                     <option selected="selected">Card payment</option>
@@ -119,6 +110,16 @@
                    name="gender"
                    value="undisclosed"/>
             <label for="undisclosed"> Rather not say</label><br>
+
+            <div class="view-box">
+                <div id="dots" v-on:click="addOrder">
+                    <div
+                            v-for="(order, key) in orders"
+                            v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+                        {{key}}
+                    </div>
+                </div>
+            </div>
             <button id="purchase" type="button"><img
                     width="120"
                     src="https://www.paintspot.ca/wp-content/uploads/2016/08/Order-Now-Orange-Button-1200-x-345.png"
