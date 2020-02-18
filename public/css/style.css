@@ -78,21 +78,21 @@ section {
     grid-template-columns: auto auto auto;
     justify-items: center;
 }
-
+/*
 .a {
-    column: 1 /span 4;
+    column: 1 /span 5;
     row: 1;
 }
 
 .b {
-    column: 1/span 4;
+    column: 1/span 5;
     row: 2;
 }
 
 .c {
-    column: 1 /span 4;
+    column: 1 /span 5;
     row: 3;
-}
+}*/
 
 #burgerImg {
     height: 200px;
