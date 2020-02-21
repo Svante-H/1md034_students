@@ -78,14 +78,14 @@ Add the following style/behaviour to your website (mostly in style.css but also 
 - [x] Exchange the fields for the customer's address with the interactive map
 - [x] Copy the parts of deli-very.js that you need to make the map work into vue_script.js
 - [x] Check that your map works and adjust the coordinates if the dots don't show up in the right place.
-- [ ] Separate addOrder into one function that controls what should happen when a user clicks in the map (displayOrder) and rewrite addOrder to control what should happen when the user clicks the order button
-- [ ] Remove the socket.on bindings to "currentQueue" and "initialize", and temporarily fix getNext to assign locally generated orderId's when an order is sent
-- [ ] Send the actual burgers with the order instead of Beans and Curry
-- [ ] Send the customer's information from your input fields with the order
-- [ ] Update the dispatcher view so that you see the following for every order:
-    - [ ] The order's location on the map
-    - [ ] The ordered burger(-s)
-    - [ ] The customer's information
+- [x] Separate addOrder into one function that controls what should happen when a user clicks in the map (displayOrder) and rewrite addOrder to control what should happen when the user clicks the order button
+- [x] Remove the socket.on bindings to "currentQueue" and "initialize", and temporarily fix getNext to assign locally generated orderId's when an order is sent
+- [x] Send the actual burgers with the order instead of Beans and Curry
+- [x] Send the customer's information from your input fields with the order
+- [x] Update the dispatcher view so that you see the following for every order:
+    - [x] The order's location on the map
+    - [x] The ordered burger(-s)
+    - [x] The customer's information
     
 ## Optional
 - [ ] Set the orderID on the server side so that multiple customers can add orders

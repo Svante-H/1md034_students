@@ -140,3 +140,6 @@ body {
     background: rgba(255,255,255, 0.5);
     padding: 1em;
 }
+#purchase{
+    padding:0;
+}

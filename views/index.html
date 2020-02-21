@@ -11,130 +11,134 @@
     <script src="https://vuejs.org/js/vue.js"></script>
 </head>
 <body>
-<main id="document">
-    <section id="header">
-        <h1 id="headertext"> Welcome to BurgerOnline</h1>
-        <img id="headerImg" alt=""
-             src="https://www.jakpost.travel/wimages/large/103-1035693_download-header-burger-youtube-banner.png"/>
-    </section>
-    <section id="burgerPicker">
-        <h3>Choose a burger!</h3>
-        <p>Pick a burger you would like to order.</p>
+    <main id="document">
+        <section id="header">
+            <h1 id="headertext"> Welcome to BurgerOnline</h1>
+            <img id="headerImg" alt=""
+                 src="https://www.jakpost.travel/wimages/large/103-1035693_download-header-burger-youtube-banner.png"/>
+        </section>
+        <section id="burgerPicker">
+            <h3>Choose a burger!</h3>
+                <p>Pick a burger you would like to order.</p>
 
-        <div class="wrapper" id="BurgerTable">
+                <div class="wrapper" id="BurgerTable">
 
-            <div class="box a" id="a" v-for="burger in food">
-                {{ burger.name }}
-            </div>
+                    <div class="box a" id="a" v-for="burger in food">
+                        {{ burger.name }}
+                    </div>
 
-            <div class="box b" id="b" v-for="burger in food">
-                <img v-bind:src="burger.imgSrc" id="burgerImg">
-            </div>
+                    <div class="box b" id="b" v-for="burger in food">
+                        <img v-bind:src="burger.imgSrc" id="burgerImg">
+                    </div>
 
-            <div class="c" id="c" v-for="burger in food">
-                <ul>
-                    <li>
-                        <p> Contains {{burger.kCal}} Calories</p>
-                    </li>
-                    <li>
-                        <p v-if="burger.gluten">
-                            Contains gluten
-                        </p>
-                        <p v-else>
-                            Gluten free
-                        </p>
-                    </li>
-                    <li>
-                        <p v-if="burger.lactose">
-                            Contains lactose
-                        </p>
-                        <p v-else>
-                            Lactose free
-                        </p>
-                    </li>
-                </ul>
-                <div>
-                    <input type="checkbox" name="burgerCheck" value="false" v-bind:id="burger.name">
-                    <label>I want a {{burger.name}}</label>
+                <div class="c" id="c" v-for="burger in food">
+                    <ul>
+                        <li>
+                            <p> Contains {{burger.kCal}} Calories</p>
+                        </li>
+                        <li>
+                            <p v-if="burger.gluten">
+                                Contains gluten
+                            </p>
+                            <p v-else>
+                                Gluten free
+                            </p>
+                        </li>
+                        <li>
+                            <p v-if="burger.lactose">
+                                Contains lactose
+                            </p>
+                            <p v-else>
+                                Lactose free
+                            </p>
+                        </li>
+                    </ul>
+                    <div>
+                        <input type="checkbox" name="burgerCheck" value="false" v-bind:id="burger.name">
+                        <label>I want a {{burger.name}}</label>
 
-                </div>
-            </div>
-        </div>
-
-
-    </section>
-    <section id="contact">
-        <h3>Delivery information:</h3>
-        <p>Please enter your credentials so we can deliver your burger</p>
-        <form>
-            <p>
-                <label for="fullname">Full name</label><br>
-                <input type="text" id="fullname" name="fn" required="required" placeholder="First and last name"/>
-            </p>
-            <p>
-                <label for="mail">E-mail</label><br>
-                <input type="email" id="mail" name="email" required="required" placeholder="E-mail adress"/>
-            </p>
-            <p>
-                <label for="payment">Payment method</label><br/>
-                <select id="payment" name="rcp">
-                    <option selected="selected">Card payment</option>
-                    <option>Swish</option>
-                    <option>Paypal</option>
-                    <option>Installment</option>
-                </select>
-            </p>
-            <p>
-                <label>Gender</label>
-            </p>
-            <input type="radio"
-                   id="male"
-                   name="gender"
-                   value="male"
-                   checked="checked"/>
-            <label for="male"> Male</label><br>
-            <input type="radio"
-                   id="female"
-                   value="female"
-                   name="gender"
-                   Female/>
-            <label for="female"> Female</label><br>
-            <input type="radio"
-                   id="nonbinary"
-                   name="gender"
-                   value="nonbinary"
-                   Non-binary/>
-            <label for="nonbinary"> Non-binary</label><br>
-            <input type="radio"
-                   id="undisclosed"
-                   name="gender"
-                   value="undisclosed"/>
-            <label for="undisclosed"> Rather not say</label><br>
-
-            <div class="view-box">
-                <div id="dots" v-on:click="addOrder">
-                    <div
-                            v-for="(order, key) in orders"
-                            v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
-                        {{key}}
                     </div>
                 </div>
             </div>
-            <button id="purchase" type="button"><img
-                    width="120"
-                    src="https://www.paintspot.ca/wp-content/uploads/2016/08/Order-Now-Orange-Button-1200-x-345.png"
-                    v-on:click="getInput()"/></button>
-        </form>
-    </section>
 
-        <div id="insertText">
 
-        </div>
+        </section>
+        <section id="contact">
+            <h3>Delivery information:</h3>
+                <p>Please enter your credentials so we can deliver your burger</p>
+                    <form>
+                        <p>
+                            <label for="fullname">Full name</label><br>
+                            <input type="text" id="fullname" name="fn" required="required" placeholder="First and last name"/>
+                        </p>
 
-    <footer>
-        <hr>
-        <p>E-mail:BurgerOnline@gmail.com</p>
-    </footer>
-</main>
+                        <p>
+                            <label for="mail">E-mail</label><br>
+                            <input type="email" id="mail" name="email" required="required" placeholder="E-mail adress"/>
+                        </p>
+
+                        <p>
+                            <label for="payment">Payment method</label><br/>
+                                <select id="payment" name="rcp">
+                                    <option selected="selected">Card payment</option>
+                                    <option>Swish</option>
+                                    <option>Paypal</option>
+                                    <option>Installment</option>
+                                </select>
+                        </p>
+                        <p>
+                            <label>Gender</label>
+                        </p>
+
+                        <input type="radio"
+                               id="male"
+                               name="gender"
+                               value="male"
+                               checked="checked"/>
+                        <label for="male"> Male</label><br>
+
+                        <input type="radio"
+                               id="female"
+                               value="female"
+                               name="gender"
+                               Female/>
+                        <label for="female"> Female</label><br>
+                        <input type="radio"
+                               id="nonbinary"
+                               name="gender"
+                               value="nonbinary"
+                               Non-binary/>
+                        <label for="nonbinary"> Non-binary</label><br>
+                        <input type="radio"
+                               id="undisclosed"
+                               name="gender"
+                               value="undisclosed"/>
+                        <label for="undisclosed"> Rather not say</label><br>
+
+                <div class="view-box">
+                    <div id="dots" v-on:click="displayOrder">
+                        <div v-if="isMapClicked" v-bind:style="{ left: localOrder.position.x + 'px', top: localOrder.position.y + 'px'}">
+                            {{localOrder.display}}
+                        </div>
+                    </div>
+                </div>
+                <button id="purchase" type="button"><img
+                        width="120"
+                        src="https://www.paintspot.ca/wp-content/uploads/2016/08/Order-Now-Orange-Button-1200-x-345.png"
+                        v-on:click="getInput()"/></button>
+            </form>
+        </section>
+
+            <div id="insertText">
+
+            </div>
+
+        <footer>
+            <hr>
+            <p>E-mail:BurgerOnline@gmail.com<br>
+                All rights reserved
+            </p>
+        </footer>
+    </main>
 </body>
 </html>
